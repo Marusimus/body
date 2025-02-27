@@ -1,9 +1,6 @@
 public class BmiService {
-    double denominator;
-
     public int calculate(double meter, double kilogram) {
-        denominator = meter * meter;
-        double result = kilogram / denominator;
+        double result = kilogram / Math.pow(meter, 2);
         return (int) result;
     }
 }
